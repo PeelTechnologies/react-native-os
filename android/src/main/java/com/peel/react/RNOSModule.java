@@ -3,7 +3,7 @@
  * All rights reserved.
  */
 
-package com.peel.react;
+package com.peel.react.rnos;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
