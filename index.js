@@ -58,4 +58,8 @@ exports.tmpdir = exports.tmpDir = function () {
     return '/tmp';
 };
 
+exports.homedir = function () {
+    return RNOS.homedir;
+};
+
 exports.EOL = '\n';
