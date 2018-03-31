@@ -1,6 +1,6 @@
 {
   "name": "react-native-os",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "node's os module for react-native",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/narmitech/react-native-os"
+    "url": "https://github.com/aprock/react-native-os"
   },
   "keywords": [
     "react-component",
@@ -24,9 +24,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/narmitech/react-native-os/issues"
+    "url": "https://github.com/aprock/react-native-os/issues"
   },
-  "homepage": "https://github.com/narmitech/react-native-os",
+  "homepage": "https://github.com/aprock/react-native-os",
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "eslint-plugin-react": "^3.11.3"
