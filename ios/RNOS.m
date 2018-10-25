@@ -157,4 +157,8 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
     return ifaces;
 }
 
++ (BOOL)requiresMainQueueSetup {
+    return YES;
+}
+
 @end
