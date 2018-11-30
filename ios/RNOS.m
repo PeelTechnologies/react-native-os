@@ -78,6 +78,11 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
     };
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+    return NO;
+}
+
 - (NSDictionary*)networkInterfaces {
     NSMutableDictionary* ifaces = [NSMutableDictionary new];
     struct ifaddrs *addrs, *ent;
