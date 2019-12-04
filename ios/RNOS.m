@@ -63,10 +63,24 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
     [self stopObserving];
 }
 
+- (NSString *)getPathForDirectory:(int)directory
+{
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES);
+  return [paths firstObject];
+}
+
 - (NSDictionary *)constantsToExport
 {
     // initialize os info dict
-    return @{@"networkInterfaces": [self networkInterfaces]};
+    return @{
+        @"networkInterfaces": [self networkInterfaces],
+        @"homedir": [self getPathForDirectory:NSDocumentDirectory]
+    };
+}
+
++ (BOOL)requiresMainQueueSetup
+{
+    return NO;
 }
 
 - (NSDictionary*)networkInterfaces {
