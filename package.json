@@ -1,33 +1,14 @@
 {
-  "_from": "react-native-os@^1.2.6",
-  "_id": "react-native-os@1.2.6",
-  "_inBundle": false,
-  "_integrity": "sha512-OlT+xQAcvkcnf7imgXiu+myMkqDt4xw2bP5SlVo19hEn5XHBkPMLX7dk3sSGxxncH/ToMDsf1KLyrPabNVtadA==",
-  "_location": "/react-native-os",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "react-native-os@^1.2.6",
-    "name": "react-native-os",
-    "escapedName": "react-native-os",
-    "rawSpec": "^1.2.6",
-    "saveSpec": null,
-    "fetchSpec": "^1.2.6"
+  "name": "react-native-os",
+  "version": "1.2.7",
+  "description": "node's os module for react-native",
+  "main": "index.js",
+  "scripts": {
+    "start": "exit 1"
   },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/react-native-os/-/react-native-os-1.2.6.tgz",
-  "_shasum": "1bb16d78ccad1143972183a04f443cf1af9fbefa",
-  "_spec": "react-native-os@^1.2.6",
-  "author": {
-    "name": "Andy Prock",
-    "email": "aprock@gmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/aprock/react-native-os/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aprock/react-native-os"
   },
   "bundleDependencies": false,
   "deprecated": false,
@@ -45,15 +26,13 @@
     "ios",
     "android"
   ],
-  "license": "MIT",
-  "main": "index.js",
-  "name": "react-native-os",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aprock/react-native-os.git"
+  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/aprock/react-native-os/issues"
   },
-  "scripts": {
-    "start": "exit 1"
-  },
-  "version": "1.2.7"
+  "homepage": "https://github.com/aprock/react-native-os",
+  "devDependencies": {
+    "babel-eslint": "^4.1.6",
+    "eslint-plugin-react": "^3.11.3"
+  }
 }

@@ -71,4 +71,8 @@ exports.homedir = function() {
   return RNOS.homedir;
 };
 
+exports.homedir = function () {
+    return RNOS.homedir;
+};
+
 exports.EOL = '\n';
