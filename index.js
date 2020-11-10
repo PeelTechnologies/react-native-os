@@ -1,61 +1,78 @@
 // original: https://github.com/CoderPuppy/os-browserify
-var {
-  DeviceEventEmitter,
-  NativeModules,
-  Platform
-} = require('react-native');
+var {DeviceEventEmitter, NativeModules, Platform} = require('react-native');
 var RNOS = NativeModules.RNOS;
 
 // update the osInfo
-var osInfo = { }
-DeviceEventEmitter.addListener('rn-os-info', function (info) {
-    osInfo = info;
+var osInfo = {};
+DeviceEventEmitter.addListener('rn-os-info', function(info) {
+  osInfo = info;
 });
 
-exports.endianness = function () { return 'LE' };
-
-exports.hostname = function () {
-    if (typeof location !== 'undefined') {
-        return location.hostname
-    }
-    else return '';
+exports.endianness = function() {
+  return 'LE';
 };
 
-exports.loadavg = function () { return [] };
-
-exports.uptime = function () { return 0 };
-
-exports.freemem = function () {
-    return Number.MAX_VALUE;
-};
-
-exports.totalmem = function () {
-    return Number.MAX_VALUE;
-};
-
-exports.cpus = function () { return [] };
-
-exports.type = function () { return 'React Native' };
-
-exports.release = function () {
-    if (typeof navigator !== 'undefined') {
-        return navigator.appVersion;
-    }
+exports.hostname = function() {
+  if (typeof location !== 'undefined') {
+    return location.hostname;
+  } else {
     return '';
+  }
 };
 
-exports.networkInterfaces
-= exports.getNetworkInterfaces
-= function () {
-    return osInfo.networkInterfaces || RNOS.networkInterfaces
+exports.loadavg = function() {
+  return [];
 };
 
-exports.arch = function () { return 'javascript' };
+exports.uptime = function() {
+  return 0;
+};
 
-exports.platform = function () { return Platform.OS };
+exports.freemem = function() {
+  return Number.MAX_VALUE;
+};
 
-exports.tmpdir = exports.tmpDir = function () {
-    return '/tmp';
+exports.totalmem = function() {
+  return Number.MAX_VALUE;
+};
+
+exports.cpus = function() {
+  return [];
+};
+
+exports.type = function() {
+  return 'React Native';
+};
+
+exports.release = function() {
+  if (typeof navigator !== 'undefined') {
+    return navigator.appVersion;
+  }
+  return '';
+};
+
+exports.networkInterfaces = exports.getNetworkInterfaces = function() {
+  return osInfo.networkInterfaces || RNOS.networkInterfaces;
+};
+
+exports.arch = function() {
+  return 'javascript';
+};
+
+exports.platform = function() {
+  return Platform.OS;
+};
+
+exports.tmpdir = exports.tmpDir = function() {
+  return '/tmp';
+};
+
+exports.homedir = function() {
+  return RNOS.homedir;
+};
+
+exports.homedir = function () {
+    return RNOS.homedir;
 };
 
 exports.EOL = '\n';

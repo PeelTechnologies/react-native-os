@@ -28,6 +28,7 @@ import java.net.SocketException;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 
@@ -67,6 +68,7 @@ public final class RNOS extends ReactContextBaseJavaModule implements LifecycleE
         }
 
         constants.put("networkInterfaces", networkMap);
+        constants.put("homedir", getReactApplicationContext().getApplicationInfo().dataDir);
         return constants;
     }
 
@@ -171,7 +173,7 @@ public final class RNOS extends ReactContextBaseJavaModule implements LifecycleE
                 short prefixLength = address.getNetworkPrefixLength();
                 if (inet instanceof Inet4Address) {
                     final int value = 0xffffffff << (32 - prefixLength);
-                    netmask = String.format("%d.%d.%d.%d", (value >> 24) & 0xFF,
+                    netmask = String.format(Locale.US,"%d.%d.%d.%d", (value >> 24) & 0xFF,
                             (value >> 16) & 0xFF,  (value >> 8) & 0xFF, value & 0xFF);
                 } else {
                     final long[] value = new long[] { 0xffffffffffffffffl, 0xffffffffffffffffl };
